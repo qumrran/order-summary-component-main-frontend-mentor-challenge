@@ -1,0 +1,155 @@
+:root {
+	--BlueColor: hsl(228, 45%, 44%);
+	--PaleBlue: hsl(225, 100%, 94%);
+	--BrightBlue: hsl(245, 75%, 52%);
+	--VerypaleBlue: rgb(248, 249, 254);
+	--DesaturatedBlue: rgb(126, 128, 149);
+	--DarkBlue: rgb(33, 44, 100);
+	--White: rgb(255, 255, 255);
+	--cancelOrder: rgb(119, 126, 156);
+	--activebtn: rgb(118, 108, 241);
+	--globalwrappercolor: rgb(146, 153, 174);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-image: url('./images/pattern-background-mobile.svg');
+	background-repeat: no-repeat;
+	background-position: 50% -470px;
+	background-size: cover;
+	font-family: 'Red Hat Display', sans-serif;
+	color: var(--DarkBlue);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--PaleBlue);
+}
+
+body > div {
+	height: 567px;
+	width: 326px;
+	background-color: var(--White);
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 1px 22px 27px -1px rgba(199, 208, 247, 1);
+}
+
+header img {
+	width: 100%;
+	height: 160px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 25px;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: 900;
+	padding-bottom: 30px;
+}
+
+p {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--DesaturatedBlue);
+	padding-bottom: 30px;
+}
+
+section {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	background-color: var(--VerypaleBlue);
+	border-radius: 15px;
+}
+
+section div {
+	width: auto;
+	height: auto;
+	display: flex;
+	margin-left: 5px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	background-color: transparent;
+}
+
+section > div > span:first-child {
+	font-weight: 700;
+}
+
+section > div > span:nth-child(2) {
+	font-weight: 500;
+	font-size: 14px;
+	color: var(--DesaturatedBlue);
+}
+
+section > img {
+	margin-left: 20px;
+	height: 50px;
+	width: 50px;
+}
+
+section a {
+	font-size: 12px;
+	font-weight: 700;
+	margin-left: 35px;
+	transition: color 0.3s;
+}
+
+section a:hover {
+	color: var(--activebtn);
+	text-decoration: none;
+}
+
+button {
+	width: 100%;
+	height: 50px;
+	margin-top: 30px;
+	border-radius: 15px;
+	border: none;
+	background-color: var(--BrightBlue);
+	color: var(--White);
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 0px 24px 24px 0px rgba(219, 212, 245, 1);
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: var(--activebtn);
+}
+
+button ~ a {
+	padding-top: 20px;
+	font-weight: 700;
+	font-size: 13px;
+	color: var(--cancelOrder);
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+button ~ a:hover {
+	color: var(--DarkBlue);
+}
+
+@media only screen and (min-width: 400px) {
+	body {
+		background-image: url('./images/pattern-background-desktop.svg');
+		background-position: center -200px;
+	}
+}
